@@ -1,6 +1,6 @@
 {
-  "name": "@agroyaar/table",
-  "version": "1.0.2-0",
+  "name": "@npmagroyaar/table",
+  "version": "1.0.2-2",
   "description": "Agroyaar Table",
   "main": "dist/index.js",
   "type": "module",
@@ -14,7 +14,11 @@
     "test": "echo \"No tests specified\" && exit 0",
     "type-check": "tsc --noEmit",
     "spell-check": "cspell -- src/**/*.{ts,tsx,md}",
-    "lint": "eslint \"src/**/*.{ts,tsx}\""
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "check-all": "pnpm run spell-check && pnpm run type-check && pnpm run lint && pnpm run build"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "release-it": {
     "git": {
@@ -27,6 +31,9 @@
       "before:init": [
         "pnpm build"
       ]
+    },
+    "github": {
+      "release": true
     }
   },
   "keywords": [

@@ -1,7 +1,23 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["agroyaar", "eslint", "tsup", "tsx", "zod"],
-  "ignorePaths": ["node_modules/**", "dist/**", "build/**"],
-  "ignoreWords": ["somespellingtobesuppressed"]
+  "words": [
+    "agroyaar",
+    "eslint",
+    "npmagroyaar",
+    "tsup",
+    "tsx",
+    "zod"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "dist/**",
+    "build/**"
+  ],
+  "ignoreWords": [
+    "somespellingtobesuppressed"
+  ],
+  "ignoreRegExpList": [
+    "[\\u0600-\\u06FF]+"
+  ]
 }
