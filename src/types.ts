@@ -7,12 +7,12 @@ export type DataColumn<T> = {
   filterable?: boolean;
   filterType?: "text" | "range" | "select";
   filterOptions?: { label: string; value: string }[];
-  render?: (value: T[keyof T], row: T) => React.ReactNode;
+  render?: (_value: T[keyof T], _row: T) => React.ReactNode;
 };
 
 export type ActionColumn<T> = {
   label: string;
-  render: (row: T) => React.ReactNode;
+  render: (_row: T) => React.ReactNode;
 };
 
 export type Column<T> = DataColumn<T> | ActionColumn<T>;

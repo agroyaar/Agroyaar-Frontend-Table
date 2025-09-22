@@ -18,14 +18,12 @@ export const useClient = <T>(
     data.slice(0, rowsPerPage)
   );
 
-  // if page changed, data sorted or filtered paginated handler must be run (in filter and sort page must be reset to 1)
   useEffect(() => {
     paginateData(sortedData, currentPage, rowsPerPage, (paginateData) =>
       setPaginatedData(paginateData)
     );
   }, [currentPage, sortedData, filteredData]);
 
-  // if filter changed sort also must be rerurn again to re sort new filtered items
   useEffect(() => {
     sortData(filteredData, currentSort, (sortedData) =>
       setSortData(sortedData)
